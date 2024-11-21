@@ -1,0 +1,90 @@
+:root {
+    --primary-color: rgb(255,0,50);
+    --text-color-hover: #ffffff;
+    --text-color: #000000;
+    --secondary-text-color: #666666;
+    --category-color-hover: #ffffff;
+}
+
+@media(max-width: 768px) {
+	.pgp-gallery {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr) !important;
+	}
+}
+
+.pgp-gallery {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    gap: 15px;
+}
+
+.pgp-gallery-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.pgp-gallery-card:hover {
+    background: var(--primary-color) !important;
+    background: linear-gradient(180deg, rgba(255,0,50,1) 0%, rgba(0,0,0,1) 95%) !important;
+}
+
+.pgp-gallery-card:hover .pgp-gallery-title {
+    color: var(--text-color-hover);
+}
+
+.pgp-gallery-title {
+    margin: 0;
+    font-family: inherit !important;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.pgp-gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 20px !important;
+    max-height: 400px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    image-rendering: crisp-edges;
+    width: auto;
+    height: 300px;
+    max-width: 100%;
+}
+
+.pgp-single-image .pgp-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pgp-gallery-category {
+    font-size: 18px;
+    color: var(--secondary-text-color);
+    margin-top: 5px;
+}
+
+.pgp-gallery-card:hover .pgp-gallery-category {
+    color: var(--category-color-hover);
+}
+
+.pgp-gallery form {
+    margin-bottom: 20px;
+}
+
+select {
+    width: 350px;
+    padding: 10px;
+    margin: 50px 0px;
+    color: #fd0031;
+    border: 1px solid #fd0031;
+    border-radius: 25px;
+    font-family: inherit;
+    font-size: 18px;
+}
